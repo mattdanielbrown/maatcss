@@ -11,7 +11,9 @@
     "lint": "./node_modules/.bin/stylelint \"**/*.scss\" --syntax scss",
     "docs": "webpack --progress --config webpack.config.js",
     "start": "webpack-dev-server",
-    "preversion": "npm run docs"
+    "preversion": "npm run docs",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -35,7 +37,8 @@
   "dependencies": {
     "normalize.css": "^7.0.0",
     "sass-mq": "^3.3.2",
-    "sass-svg-uri": "^1.0.0"
+    "sass-svg-uri": "^1.0.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
@@ -53,7 +56,8 @@
     "stylelint-config-standard": "^16.0.0",
     "stylelint-order": "^0.4.3",
     "webpack": "^2.3.3",
-    "webpack-dev-server": "^2.4.2"
+    "webpack-dev-server": "^4.0.0"
   },
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "snyk": true
 }
